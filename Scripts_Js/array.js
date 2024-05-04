@@ -148,6 +148,5 @@ for (let x = 0; x < mes.length; x++) {
         }
     }
 }
-
 // Percorrendo todo o array !!
 
