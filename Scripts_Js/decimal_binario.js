@@ -1,3 +1,12 @@
+/*
+- Para realizar a conversão de decimal para binário -> 
+- Faz a divisão sucessiva por 2 (base do sistema binário)
+- O resultado da conversão será dado pelo último quociente (MSB)
+- e o agrupamento dos restos de divisão será o número binário. 
+- A leitura do resultado é feita do último quociente para o primeiro resto.
+
+*/
+
 function decbin(numerodecimal) { // Quero saber 23 em binario 
     var restodapilha = [],
         rest,
@@ -15,4 +24,23 @@ function decbin(numerodecimal) { // Quero saber 23 em binario
     return binario
 }
 // chamando a função 
-console.log(decbin(23));
+//console.log(decbin(23));
+
+// Text2
+function decimal_binario(numerodec) {
+    var resto_pilha = [],
+        resto,
+        binario_str = "";
+
+    while (numerodec > 0) {
+        resto = Math.floor(numerodec % 2);
+        resto_pilha.push(resto);
+        numerodec = Math.floor(numerodec / 2);
+    }
+    while (resto_pilha.length > 0) {
+        binario_str += resto_pilha.pop().toString();
+    }
+    return binario_str;
+}
+
+console.log(decimal_binario(23));
