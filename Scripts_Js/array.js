@@ -1,8 +1,7 @@
 //ARRAY são denominados com [] 
-let carros = new Array();
-
 let avgTemp = []
-
+//Fomra de criar uma array vazio
+let carros = new Array();
 
 avgTemp[0] = 30.4; //Janeiro
 avgTemp[1] = 32.5; //Fevereiro
@@ -13,7 +12,7 @@ avgTemp[4] = 25.4; //Maio
 // Pegar o ARRAY completo
 console.log(avgTemp);
 
-// Pegar por mês separados 
+// Pegar por mês individual pela sua posição
 console.log(avgTemp[2]); // Março
 
 // Saber Quantos temos 
@@ -82,17 +81,18 @@ numeros[0] = 0;
 //Ele Sobreescreve o valor antigo 
 console.log(numeros[0]);
 console.log(numeros);
+
 //Remover o Ultimo Elemento 
 let qtd = numeros.length;
-numeros.pop();
-numeros.pop();
-numeros.pop();
-numeros.pop();
-numeros.pop();
-numeros.pop();
+numeros.pop(); // Remove o -4
+numeros.pop(); // Remove o -3
+numeros.pop(); // Remove o -2
+numeros.pop(); // Remove o -1
+numeros.pop(); // Remove o -0
+numeros.pop(); // Remove o  1
 
 //Remover do inicio 
-numeros.shift();
+numeros.shift(); // Remove o indice 0
 numeros.shift();
 numeros.shift();
 numeros.shift();
@@ -159,7 +159,7 @@ let animals = ["Macaco", "Aguia", "Avestruz", "Leão", "Cão"];
 console.log(animals.indexOf("Cão"));
 // Se retornar -1 (Não existe esse animal)
 // Se retornar  1 (vai passar a possição do animal no array)
-// Para retornar false ou true >> console.log(animals.indexOf("Cão")> -1);
+// Para retornar false ou true >> console.log(animals.indexOf("Cão") > -1);
 
 
 //Criar uma array personalizada com os animais com a letra e
@@ -178,6 +178,7 @@ console.log(animals.join("*")); //Basta inserir o simbolo ou espaço
 
 //Preencher uma array vazia com alguma coisa especifica
 const arrayvazia = new Array(9); // Array vazia com tamanho 10 espaços
+
 //Adicionando a essa array 9 elementos especificos
 arrayvazia.fill("Aguardando...") // Adiciona nos 9 espaços
 console.log(arrayvazia); // Não preenchido pra depois colocar o que quiser nela
@@ -239,4 +240,4 @@ lista_usuarios.set(
     { nome: "Jorge", username: "Jhosasd" }
 )
 
-console.log(lista_usuarios.toString()); s
+console.log(lista_usuarios.toString()); 
